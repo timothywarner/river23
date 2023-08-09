@@ -1,0 +1,15 @@
+az deployment sub create `
+    --name openai-deployment `
+    --location eastus `
+    --template-file ../openai.solution.bicep `
+    --parameters `
+        envName=dev `
+        resourceGroupName=rg-test-openai `
+        resourceGroupLocation=westeurope `
+        openAiServiceName=oai-demoopenai-bicep `
+        openAiCustomDomain=demo-openai-bicep `
+        openAiResourceGroupLocation=eastus `
+        openAiSkuName=S0 `
+        openAiDeploymentName=copilot `
+        openAiDeploymentModelName=gpt-35-turbo `
+        openAiDeploymentModelVersion=0301
